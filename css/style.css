@@ -1,0 +1,218 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2a009e+0,b70061+50,e27e1f+100 */
+  background: #2a009e; /* Old browsers */
+  background: -moz-linear-gradient(top, #2a009e 0%, #b70061 50%, #e27e1f 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #2a009e 0%,#b70061 50%,#e27e1f 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #2a009e 0%,#b70061 50%,#e27e1f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a009e', endColorstr='#e27e1f',GradientType=0 ); /* IE6-9 */
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.container_player {
+	width:780px;
+	margin: 0 auto;
+	position: relative;
+	background-color: #505050;
+	overflow: hidden;
+	/*border: 2px solid;*/
+}
+
+.video_player {
+	display: block;
+  	width: 100%;
+}
+
+.menu {
+	display: flex;
+	background-color: rgba(0,0,0,0);
+	flex-wrap: nowrap;
+	background-color: #111;
+	position: absolute;
+	background: linear-gradient(to top, rgba(30,30,30,0.8), rgba(0,0,0,0));
+	width: 100%;
+	height: 45px;
+	/*border: 1px solid blue;*/
+	bottom: 0;
+	right: 0;
+	left: 0;
+	transform: translateY(100%);
+	transition:all .2s;
+	z-index: 2147483647; /*минимальное значение при котором показывается в фулл режиме*/
+}
+
+.container_player:hover .menu {
+	transform: translateY(0);
+}
+
+.hide_menu { /*нужно для полноэкранного режима*/
+	transform: translateY(100%) !important; 
+	/*что бы перекрывался ховер при наведении*/
+}
+
+.btn {
+	font-weight: bold;
+	text-shadow: #fff 0 0 3px;
+	background-color: transparent;
+	border-style: none;
+	border:0;
+	outline:0;
+	color: white;
+	cursor: pointer;
+	width: 40px;
+	/*border: 1px solid red;*/
+}
+
+#play_pause {
+	margin-left: 5px;
+}
+
+.icon {
+  width: 20px;
+  height: 1.4em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+#position {
+	-webkit-appearance: none ; /* Скрывает слайдер, чтобы можно было создать свой */
+	box-sizing: inherit;
+	border-style: none;
+	border:0;
+	outline:0;
+	background-color: transparent;
+	/*border: 1px solid red;*/
+	height: auto;
+	width: 100%;
+	margin: 0 0 0 15px;
+}
+
+#volume {
+	width: 60px;
+	-webkit-appearance: none ; /* Скрывает слайдер, чтобы можно было создать свой */
+	border-style: none;
+	border:0;
+	outline:0;
+	background-color: transparent;
+	/*border: 1px solid red;*/
+	margin: 0 0 0 5px;
+}
+
+#position::-webkit-slider-thumb, #volume::-webkit-slider-thumb { /*указатель на полоске*/
+	-webkit-appearance: none;
+	height: 13px;
+	width: 13px;
+	border-radius: 50%;
+	background: #ffffff;
+	cursor: pointer;
+	margin-top: -3px; /* Вам нужно указать значение для поля в Chrome, но в Firefox и IE это происходит автоматически */
+}
+
+#position::-webkit-slider-runnable-track, #volume::-webkit-slider-runnable-track {  /*полоска*/
+	-webkit-appearance: none;
+	width: 100%;
+	height: 6px;
+	background-color: rgba(255,255,255,0.3);
+	border-radius: 5px;
+	border: 0.2px solid #010101;
+	border-style: none;
+	cursor: pointer;
+	outline: 0;
+}
+
+#volume::-webkit-slider-runnable-track {
+	background-color: rgba(255,170,0,0.5);
+}
+
+.block_time {
+	display: block;
+	/*border: 1px solid #fff;*/
+	margin: 0 10px;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+
+.time {
+	display: inline-block;
+	height: 1em;
+	/*border: 1px solid green;*/
+	margin: 20% 0;
+	font-family: sans-serif;
+	font-size: 15px;
+	color: rgba(255,255,255, 0.8);
+	text-shadow: #fff 0 0 1px;
+}
+
+#full {
+	margin-right: 5px;
+}
+
+.video_player::-webkit-media-controls { 
+  display:none !important; 
+  /*можно и без импортант. 
+  А вообще, отменяет стандартные контролсы при попадании в полноэкранный режим*/
+}
+
+#qwe {
+  width:730px;
+	margin: 2vh auto;
+  font-family: 'Arial';
+  opacity: 0.9;
+  color: rgb(237, 237, 237);
+}
+
+.grey {
+  width: 100%;
+  background-color: #1A1A1A;
+}
+
+.label {
+  width:780px;
+	margin: 0 auto;
+  font-family: 'Impact';
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  opacity: 0.9;
+  margin: 11vh auto 4vh auto;
+  text-align: center;
+}
+
+
+.effect7
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect7:before, .effect7:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect7:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
